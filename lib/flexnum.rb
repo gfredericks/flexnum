@@ -18,6 +18,6 @@ class Flexnum < Numeric
   private
 
   def f v
-    Flexnum.initialize v
+    Flexnum.new v
   end
 end
