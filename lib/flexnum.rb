@@ -1,4 +1,5 @@
-class Flexnum
+class Flexnum < Numeric
+  include Comparable
   attr_accessor :value # any easy way to avoid this?
 
   def initialize v; @value = v; end
@@ -8,6 +9,10 @@ class Flexnum
 
   def + o
     f(value + o.value)
+  end
+
+  def <=> o
+    value <=> o.value
   end
 
   private
